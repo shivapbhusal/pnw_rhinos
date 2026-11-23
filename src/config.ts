@@ -24,9 +24,9 @@ export interface Stat {
 }
 
 export const SITE = {
-  name: "Quillmoor Analytics",
+  name: "PNW Rhinos",
   /** Short name for the logo on small screens. */
-  shortName: "Quillmoor",
+  shortName: "PNW",
   tagline: "Forecasting, pricing and reporting for firms without a data team",
   description:
     "A five-person data and strategy consultancy in Port Alder. Demand forecasts, pricing, experiments and reporting for companies of 20 to 500 people, each scoped to a fixed price before work starts.",

@@ -8,7 +8,7 @@ import { SITE } from "../config";
 
 // Roles, not names: replace them with your own people.
 const team = [
-  { role: "Lead statistician", note: "Forecasting and experiments. Twelve years in grocery supply chains before Quillmoor." },
+  { role: "Lead statistician", note: `Forecasting and experiments. Twelve years in grocery supply chains before ${SITE.name}.` },
   { role: "Pricing specialist", note: "Price response models and discount rules. Previously set prices for a freight carrier." },
   { role: "Analytics engineer", note: "SQL, dbt and warehouses. Builds the checks and jobs you keep after we leave." },
   { role: "Reporting lead", note: "Metric definitions and dashboards. Writes the glossary your finance lead signs." },
@@ -33,7 +33,7 @@ const turnDown = [
 >
   <PageHeader
     title="Five people who *show their working*"
-    lead="Quillmoor started in 2012, when two statisticians left a grocery chain and a freight company to do the same work for firms that could not hire a data team of their own."
+    lead={`${SITE.name} started in 2012, when two statisticians left a grocery chain and a freight company to do the same work for firms that could not hire a data team of their own.`}
   />
 
   <section class="section" aria-labelledby="team-title">
