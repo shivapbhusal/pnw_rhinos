@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "order": {
+      "default": 100,
+      "type": "number"
+    },
+    "art": {
+      "type": "string",
+      "enum": [
+        "grid",
+        "bars",
+        "forecast",
+        "curve",
+        "bells",
+        "clusters"
+      ]
+    },
+    "priceFrom": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "deliverables": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "tags",
+    "summary",
+    "art"
+  ]
+}
