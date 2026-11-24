@@ -9,7 +9,7 @@ export const SITE = {
   locale: "en_US",
   areaServed: "Pacific Northwest",
   social: [] as { label: string; href: string }[],
-  theme: { accent: "#f4b942", accentText: "#17130b" },
+  theme: { accent: "#2563eb", accentText: "#ffffff" },
   formgong: {
     accessKey: "fk_your_access_key",
     endpoint: "https://formgong.com/submit",

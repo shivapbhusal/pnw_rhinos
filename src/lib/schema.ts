@@ -13,7 +13,7 @@ export function businessJsonLd(site: URL) {
     url: new URL("/", site).href,
     sport: "Cricket",
     image: new URL("/og.jpg", site).href,
-    logo: new URL("/apple-touch-icon.png", site).href,
+    logo: new URL("/logo.jpg", site).href,
     areaServed: SITE.areaServed,
     sameAs: SITE.social.map((s) => s.href),
   };
