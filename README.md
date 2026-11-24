@@ -100,12 +100,12 @@ Numbers match the comments in the code.
 | 3  | Counters count up from 0 in steps, in the accent color | `.count` in `effects.css` |
 | 4  | The hero stays put (sticky) while the next block slides up over it | `.hero-wrap` in `pages/index.astro` |
 | 5  | A statement fills line by line: the key words turn from grey to the accent behind a front that sweeps left to right | `FillLines.astro`, `.fl-top` |
-| 6  | Line-art orbits turn slowly and lean towards the pointer | `Orbits.astro`, `.orbit-ring`, `scripts/follow.ts` |
+| 6  | Orbit image leans towards the pointer | `Orbits.astro` (`public/or.png`), `scripts/follow.ts` |
 | 7  | A large rounded panel of drifting lines grows from 90% as it scrolls in; its quote flips in | `sections/MediaPanel.astro`, `.media`, `scenes.ts` (`flow`) |
 | 8  | Two-tone section heading that fills like 5, a lead and a short accent rule | `sections/Services.astro` |
 | 9  | Service cards start as a staircase, each 300px below the last, and pull up into a 3-column grid (2 columns on tablets) as you scroll; each flips in from flat when it reaches the screen; the finished grid scrolls away as one block | `sections/Services.astro`, `ServiceCard.astro`, `ServiceArt.astro`, `[data-enter="flip"]` |
 | 10 | Split section: the picture grows from 90% as it scrolls in | `sections/Split.astro`, `Ridgelines.astro`, `.split-pic` |
-| 11 | An accent panel slides in from the left edge of the screen next to sticky turning orbits; each step's dot opens, its title tilts in and its paragraph is wiped up | `sections/Process.astro`, `[data-enter]` |
+| 11 | An accent panel slides in from the left edge of the screen next to a sticky orbit image; each step's dot opens, its title tilts in and its paragraph is wiped up | `sections/Process.astro`, `[data-enter]` |
 | 12 | The closing heading fills like 5 | `sections/FinalCta.astro` |
 | 13 | Footer over a rolling 3D field of dots | `Footer.astro`, `scenes.ts` (`wave`) |
 
@@ -136,7 +136,7 @@ src/
 │   ├── sections/       Hero, Statement, MediaPanel, Services, Split, Process, FinalCta (the home page, in order)
 │   ├── ContactForm.astro   The form and its script
 │   ├── FillLines.astro     Line-by-line fill (5, 8, 12)
-│   ├── Orbits.astro        Line-art orbits (6, 11)
+│   ├── Orbits.astro        Orbit image (6, 11)
 │   ├── Ridgelines.astro    Build-time ridgeline chart (10)
 │   ├── ServiceCard.astro, ServiceArt.astro   Service cards and their line drawings (9)
 │   ├── Head.astro          Meta tags, Open Graph, JSON-LD

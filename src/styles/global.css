@@ -7,8 +7,8 @@
    <html> by the layout). Every text pair below is at least 4.5:1.
 ------------------------------------------------------------------ */
 :root {
-  --accent: #2563eb;
-  --accent-text: #ffffff;
+  --accent: #f4b942;
+  --accent-text: #17130b;
   --c-bg: #040319; /* ground */
   --c-surface: #0d0c26; /* cards, fields */
   --c-white: #ffffff; /* hero heading, stat labels */
@@ -16,9 +16,9 @@
   --c-muted: #949494; /* secondary and unfilled text, 6.7:1 */
   --c-dim: #949494;
   --c-line: rgb(255 255 255 / 0.5); /* 1px dividers */
-  --c-art: #5c5b7f; /* decorative line art (orbits) */
+  --c-art: #5c5b7f; /* decorative line art */
   --c-danger: #ff9a8a;
-  --c-success: #2563eb;
+  --c-success: #f4b942;
   --radius: 12px; /* cards, buttons, panels */
   --radius-media: 24px; /* pictures */
   --header-h: 90px;

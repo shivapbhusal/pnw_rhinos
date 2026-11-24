@@ -1,6 +1,6 @@
 ---
 /**
- * 1. Fixed header: logo, three links in the middle, the accent button on the right and a 1px
+ * Fixed header: four links in the middle, the accent button on the right and a 1px
  * divider that runs from the content edge to the right edge of the screen.
  */
 import { SITE } from "../config";
@@ -59,9 +59,6 @@ const isCurrent = (href: string) => path === href || path.startsWith(href);
         }
       </ul>
       <a href={SITE.cta.href} class="btn btn-primary btn-lg mt-10 w-full">{SITE.cta.label}</a>
-      <p class="mt-6 text-sm text-muted">
-        <a href={`mailto:${SITE.email}`} class="underline underline-offset-4">{SITE.email}</a> · {SITE.phone.display}
-      </p>
     </nav>
   </div>
 </header>

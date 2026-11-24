@@ -1,67 +1,62 @@
----
-/**
- * 7. Large rounded panel that scales up from 90% as it scrolls in; the quote over it (not inside
- * it, so it does not scale) flips in when it reaches the screen. The moving picture is a canvas
- * of drifting lines (no video, no photo).
- */
----
-
-<section class="media-section" aria-label="How we work">
-  <figure class="container-x media-col">
-    <div class="media" aria-hidden="true">
-      <canvas class="media-canvas" data-scene="flow"></canvas>
-      <div class="media-shade"></div>
+<section class="media-section" aria-labelledby="media-title">
+  <div class="container-x media-panel">
+    <span class="media-mark" aria-hidden="true">PNW</span>
+    <div class="media-copy">
+      <p class="eyebrow">The game brings us together</p>
+      <h2 id="media-title">Every ball is a new chance to play for the team<span class="hl">.</span></h2>
     </div>
-    <blockquote class="media-quote" data-enter="flip">
-      <p>“Every number we send comes with the query that produced it<span class="hl">.</span>”</p>
-    </blockquote>
-  </figure>
+  </div>
 </section>
 
 <style>
   .media-section {
-    height: 80vh;
+    padding-block: 48px;
   }
-  .media-col {
+  .media-panel {
     position: relative;
-    display: grid;
-    place-items: center;
-    height: 100%;
-  }
-  .media {
-    position: absolute;
-    inset: 0;
+    display: flex;
+    min-height: 430px;
+    align-items: flex-end;
     overflow: clip;
+    padding: 32px;
     border-radius: var(--radius-media);
-    background: var(--c-surface);
+    background:
+      radial-gradient(ellipse at 82% 18%, rgb(244 185 66 / 0.3), transparent 34%),
+      linear-gradient(135deg, #10243c, #08091a 68%);
   }
-  .media-canvas {
+  .media-mark {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    color: #c9c9d8;
-  }
-  .media-shade {
-    position: absolute;
-    inset: 0;
-    background: rgb(4 3 25 / 0.45);
-  }
-  .media-quote {
-    position: relative;
-    width: 80vw;
-    font-size: min(6.083733vw, 62px);
+    top: -0.5em;
+    right: -0.08em;
+    color: rgb(255 255 255 / 0.06);
+    font-size: clamp(180px, 35vw, 520px);
+    font-weight: 700;
     line-height: 1;
-    text-align: center;
-    color: var(--c-white);
+    letter-spacing: -0.1em;
+  }
+  .media-copy {
+    position: relative;
+    max-width: 760px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .media-copy h2 {
+    margin-top: 16px;
+    font-size: min(9vw, 64px);
+    line-height: 1.08;
   }
   @media (min-width: 751px) {
     .media-section {
-      height: 100vh;
-      padding-block: 10vh;
+      padding-block: 80px;
     }
-    .media-quote {
-      width: min(1000px, 100% - 64px);
+    .media-panel {
+      min-height: 560px;
+      padding: 64px;
     }
   }
 </style>

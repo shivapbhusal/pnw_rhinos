@@ -1,0 +1,60 @@
+---
+import { SITE } from "../config";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<article class:list={["cricket-details", className]} aria-label={`${SITE.name} cricket team details`}>
+  <img src="/og.jpg" alt="Cricket team group photograph" class="cricket-photo" />
+  <div class="cricket-copy">
+    <p class="cricket-label">Pacific Northwest cricket</p>
+    <h2 class="cricket-name">{SITE.name}</h2>
+    <p class="cricket-description">A team brought together by cricket, teamwork, and community across the Pacific Northwest.</p>
+    <a class="cricket-link" href="/cricket/">Discover the club <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<style>
+  .cricket-details {
+    overflow: clip;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-media);
+    background: var(--c-surface);
+  }
+  .cricket-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .cricket-copy {
+    padding: 24px;
+  }
+  .cricket-label {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cricket-name {
+    margin-top: 6px;
+    font-size: 28px;
+  }
+  .cricket-description {
+    margin-top: 14px;
+    color: var(--c-muted);
+  }
+  .cricket-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+</style>

@@ -226,24 +226,6 @@
 }
 
 /* ------------------------------------------------------------------
-   6, 11. Orbits turn slowly, each ring at its own speed (time-based).
------------------------------------------------------------------- */
-@media (prefers-reduced-motion: no-preference) {
-  .orbit-ring {
-    animation: spin var(--dur, 60s) linear infinite;
-    animation-direction: var(--dir, normal);
-  }
-  .orbits-turn {
-    animation: spin 140s linear infinite;
-  }
-}
-@keyframes spin {
-  to {
-    rotate: 360deg;
-  }
-}
-
-/* ------------------------------------------------------------------
    Plain reveal for inner pages: slides up out of a mask as it scrolls in.
 ------------------------------------------------------------------ */
 @supports (animation-timeline: view()) {

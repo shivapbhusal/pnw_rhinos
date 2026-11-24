@@ -1,5 +1,5 @@
 /**
- * 6, 11. The orbit drawings lean towards the pointer ([data-follow="<ms>"], the transition time).
+ * Legacy pointer-following helper. No orbit drawings use it, and cricket details remain fixed.
  * As measured on the reference: per axis, offset = (pointer − centre) × 24 / (distance from the
  * centre to the far edge of the screen), so it reaches ±24px at the edge; before the pointer
  * moves it is taken to be the middle of the screen, and the offset is recomputed on scroll.

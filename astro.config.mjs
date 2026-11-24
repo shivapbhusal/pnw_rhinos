@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       // The thank-you page is only reached after a form submission.
-      filter: (page) => !page.includes("/thanks/"),
+      filter: (page) => !page.includes("/thanks/") && !page.includes("/services/"),
     }),
   ],
   vite: {
