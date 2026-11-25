@@ -4,7 +4,7 @@ export const SITE = {
   shortName: "PNW",
   tagline: "Cricket in the Pacific Northwest",
   description: "PNW Rhinos is a cricket team bringing people together through the game in the Pacific Northwest.",
-  url: "https://example.com",
+  url: "https://www.pnwrhinos.com",
   lang: "en",
   locale: "en_US",
   areaServed: "Pacific Northwest",

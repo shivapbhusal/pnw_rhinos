@@ -36,9 +36,9 @@ Or clone the repository and run `npm install`, then `npm run dev`. Node 22.12 or
 
 ## Deploy to GitHub Pages
 
-The `CI` workflow checks pull requests and pushes to `main`. The `Deploy to GitHub Pages` workflow publishes the site after each push to `main`.
+The `CI` workflow checks pull requests and pushes to `main`. The `Deploy to GitHub Pages` workflow publishes the site to `https://www.pnwrhinos.com` after each push to `main`.
 
-In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The site is published at `https://shivapbhusal.github.io/pnw_rhinos/`.
+In repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**, then enter `www.pnwrhinos.com` under **Custom domain** and save. DNS should point the `www` CNAME to `shivapbhusal.github.io`; for the apex domain, use GitHub's published Pages A records. The workflow adds the `CNAME` file to each deployment.
 
 ## Rebrand it
 
