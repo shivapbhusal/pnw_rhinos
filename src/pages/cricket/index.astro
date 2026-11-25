@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import { SITE } from "../../config";
+import { withBase } from "../../lib/site-path";
 ---
 
 <BaseLayout
@@ -16,7 +17,7 @@ import { SITE } from "../../config";
   <section class="section pt-10" aria-labelledby="club-details-title">
     <div class="container-x cricket-layout">
       <figure class="cricket-photo">
-        <img src="/og.jpg" alt="Cricket team group photograph" fetchpriority="high" />
+        <img src={withBase("/og.jpg")} alt="Cricket team group photograph" fetchpriority="high" />
       </figure>
       <div class="cricket-copy">
         <p class="eyebrow">The club</p>
@@ -29,7 +30,7 @@ import { SITE } from "../../config";
           <div><dt>Sport</dt><dd>Cricket</dd></div>
           <div><dt>Region</dt><dd>{SITE.areaServed}</dd></div>
         </dl>
-        <a href="/contact/#enquiry" class="btn btn-primary">Contact the team</a>
+        <a href={withBase("/contact/#enquiry")} class="btn btn-primary">Contact the team</a>
       </div>
     </div>
   </section>
@@ -39,7 +40,7 @@ import { SITE } from "../../config";
       <p class="eyebrow">Players, supporters, cricket friends</p>
       <h2 id="invitation-title">Start a conversation with the Rhinos.</h2>
       <p>For questions about the team, playing, or getting involved, send us a message.</p>
-      <a href="/contact/#enquiry" class="btn btn-secondary">Get in touch</a>
+      <a href={withBase("/contact/#enquiry")} class="btn btn-secondary">Get in touch</a>
     </div>
   </section>
 </BaseLayout>

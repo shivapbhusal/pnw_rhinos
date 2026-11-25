@@ -2,6 +2,7 @@
 /** Final call to action for players, supporters, and cricket friends. */
 import FillLines from "../FillLines.astro";
 import { SITE } from "../../config";
+import { withBase } from "../../lib/site-path";
 ---
 
 <section class="final-cta" aria-labelledby="cta-title">
@@ -17,7 +18,7 @@ import { SITE } from "../../config";
         [30, 60],
       ]}
     />
-    <a href={SITE.cta.href} class="btn btn-primary cta-btn">Contact the team</a>
+    <a href={withBase(SITE.cta.href)} class="btn btn-primary cta-btn">Contact the team</a>
   </div>
 </section>
 

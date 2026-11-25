@@ -1,6 +1,7 @@
 ---
 /** 13. Footer over an animated 3D field of dots (canvas, src/scripts/scenes.ts). */
 import { SITE } from "../config";
+import { withBase } from "../lib/site-path";
 
 const year = new Date().getFullYear();
 ---
@@ -11,7 +12,7 @@ const year = new Date().getFullYear();
   <div class="container-x footer-grid">
     <div class="f-touch">
       <p class="f-big">get in touch<span class="text-accent">.</span></p>
-      <a href={SITE.cta.href} class="btn btn-primary f-btn">{SITE.cta.label}</a>
+      <a href={withBase(SITE.cta.href)} class="btn btn-primary f-btn">{SITE.cta.label}</a>
       <p class="f-address">{SITE.tagline}</p>
     </div>
 
@@ -21,7 +22,7 @@ const year = new Date().getFullYear();
         {
           SITE.nav.map((item) => (
             <li>
-              <a href={item.href} class="f-link">
+              <a href={withBase(item.href)} class="f-link">
                 {item.label}
               </a>
             </li>

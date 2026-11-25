@@ -1,5 +1,6 @@
 ---
 import { SITE } from "../config";
+import { withBase } from "../lib/site-path";
 
 interface Props {
   class?: string;
@@ -9,12 +10,12 @@ const { class: className } = Astro.props;
 ---
 
 <article class:list={["cricket-details", className]} aria-label={`${SITE.name} cricket team details`}>
-  <img src="/og.jpg" alt="Cricket team group photograph" class="cricket-photo" />
+  <img src={withBase("/og.jpg")} alt="Cricket team group photograph" class="cricket-photo" />
   <div class="cricket-copy">
     <p class="cricket-label">Pacific Northwest cricket</p>
     <h2 class="cricket-name">{SITE.name}</h2>
     <p class="cricket-description">A team brought together by cricket, teamwork, and community across the Pacific Northwest.</p>
-    <a class="cricket-link" href="/cricket/">Discover the club <span aria-hidden="true">→</span></a>
+    <a class="cricket-link" href={withBase("/cricket/")}>Discover the club <span aria-hidden="true">→</span></a>
   </div>
 </article>
 

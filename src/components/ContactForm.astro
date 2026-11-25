@@ -7,6 +7,7 @@
  * on the page. The success state is shown ONLY when the server answers { success: true }.
  */
 import { SITE } from "../config";
+import { withBase } from "../lib/site-path";
 import Icon from "./Icon.astro";
 
 interface Props {
@@ -18,7 +19,7 @@ const { id = "enquiry" } = Astro.props;
 const PLACEHOLDER_KEY = "fk_your_access_key";
 const accessKey = import.meta.env.PUBLIC_FORMGONG_ACCESS_KEY || SITE.formgong.accessKey;
 const endpoint = import.meta.env.PUBLIC_FORMGONG_ENDPOINT || SITE.formgong.endpoint;
-const redirect = new URL("/thanks/", Astro.site ?? Astro.url).href;
+const redirect = new URL(withBase("/thanks/"), Astro.site ?? Astro.url).href;
 const showKeyNotice = import.meta.env.DEV && accessKey === PLACEHOLDER_KEY;
 const f = (name: string) => `${id}-${name}`;
 ---
