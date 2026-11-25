@@ -1,9 +1,10 @@
 ---
 import { SITE } from "../../config";
+import { withBase } from "../../lib/site-path";
 ---
 
 <section class="hero" aria-labelledby="hero-title">
-  <img class="hero-image" src="/og.jpg" alt="" aria-hidden="true" fetchpriority="high" />
+  <img class="hero-image" src={withBase("/og.jpg")} alt="" aria-hidden="true" fetchpriority="high" />
   <div class="hero-col">
     <h1 id="hero-title" class="h-display hero-title">
       <span class="h1-line tilt-in">PNW Rhinos</span>
@@ -12,8 +13,8 @@ import { SITE } from "../../config";
     <div class="hero-lead fade-in">
       <p class="lead">{SITE.description}</p>
       <div class="hero-actions">
-        <a href="/cricket/" class="btn btn-primary">Discover the club</a>
-        <a href="/contact/#enquiry" class="hero-contact">Get in touch <span aria-hidden="true">→</span></a>
+        <a href={withBase("/cricket/")} class="btn btn-primary">Discover the club</a>
+        <a href={withBase("/contact/#enquiry")} class="hero-contact">Get in touch <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>

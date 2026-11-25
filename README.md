@@ -34,6 +34,12 @@ Or clone the repository and run `npm install`, then `npm run dev`. Node 22.12 or
 | `npm run preview` | Serve the built site locally                   |
 | `npm run check`   | Type-check `.astro` and `.ts` files            |
 
+## Deploy to GitHub Pages
+
+The `CI` workflow checks pull requests and pushes to `main`. The `Deploy to GitHub Pages` workflow publishes the site after each push to `main`.
+
+In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The site is published at `https://shivapbhusal.github.io/pnw_rhinos/`.
+
 ## Rebrand it
 
 Open `src/config.ts`. The main fields:

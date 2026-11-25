@@ -1,7 +1,11 @@
+---
+import { withBase } from "../../lib/site-path";
+---
+
 <section class="club-story" aria-labelledby="club-story-title">
   <div class="container-x story-grid">
     <figure class="story-image">
-      <img src="/og.jpg" alt="Cricket players together as a team" loading="lazy" />
+      <img src={withBase("/og.jpg")} alt="Cricket players together as a team" loading="lazy" />
     </figure>
     <div class="story-copy">
       <p class="eyebrow">A shared love of cricket</p>
@@ -10,7 +14,7 @@
         Cricket is built on skill and strategy, but it is the people beside you that make it memorable. PNW Rhinos celebrates the
         energy, effort, and togetherness that make the game special.
       </p>
-      <a href="/about/" class="btn btn-secondary story-link">More about the Rhinos</a>
+      <a href={withBase("/about/")} class="btn btn-secondary story-link">More about the Rhinos</a>
     </div>
   </div>
 </section>

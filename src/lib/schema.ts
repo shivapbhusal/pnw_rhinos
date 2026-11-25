@@ -1,4 +1,5 @@
 import { SITE } from "../config";
+import { withBase } from "./site-path";
 
 /**
  * SportsTeam details for PNW Rhinos, using confirmed club information only.
@@ -7,13 +8,13 @@ export function businessJsonLd(site: URL) {
   return {
     "@context": "https://schema.org",
     "@type": "SportsTeam",
-    "@id": new URL("/#team", site).href,
+    "@id": new URL(withBase("/#team"), site).href,
     name: SITE.name,
     description: SITE.description,
-    url: new URL("/", site).href,
+    url: new URL(withBase("/"), site).href,
     sport: "Cricket",
-    image: new URL("/og.jpg", site).href,
-    logo: new URL("/logo.jpg", site).href,
+    image: new URL(withBase("/og.jpg"), site).href,
+    logo: new URL(withBase("/logo.jpg"), site).href,
     areaServed: SITE.areaServed,
     sameAs: SITE.social.map((s) => s.href),
   };

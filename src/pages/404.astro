@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CricketDetails from "../components/CricketDetails.astro";
 import Icon from "../components/Icon.astro";
+import { withBase } from "../lib/site-path";
 ---
 
 <BaseLayout title="Page not found" description="This page doesn't exist." noindex>
@@ -11,9 +12,9 @@ import Icon from "../components/Icon.astro";
       <h1 class="h-display mt-4"><span class="dim">This page is</span> <span class="hl">out of bounds.</span></h1>
       <p class="lead mt-6 max-w-lg">That page could not be found. Head back to the cricket club, read our story, or get in touch.</p>
       <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-        <a href="/" class="btn btn-primary btn-lg">Home <Icon name="arrow-right" class="icon-shift" /></a>
-        <a href="/cricket/" class="btn btn-secondary btn-lg">Cricket</a>
-        <a href="/contact/" class="btn btn-secondary btn-lg">Contact</a>
+        <a href={withBase("/")} class="btn btn-primary btn-lg">Home <Icon name="arrow-right" class="icon-shift" /></a>
+        <a href={withBase("/cricket/")} class="btn btn-secondary btn-lg">Cricket</a>
+        <a href={withBase("/contact/")} class="btn btn-secondary btn-lg">Contact</a>
       </div>
     </div>
     <CricketDetails class="mx-auto max-w-sm" />

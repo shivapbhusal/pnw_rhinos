@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { SITE } from "../config";
+import { withBase } from "../lib/site-path";
 
 const members = [
   { title: "Players", text: "The people who bring skill, effort, and teamwork to the game." },
@@ -46,7 +47,7 @@ const members = [
       <div class="reveal rounded-3xl bg-accent p-8 text-accent-text sm:p-12 lg:p-16">
         <h2 id="contact-title" class="h-section">Cricket is better *together.*</h2>
         <p class="mt-6 max-w-2xl text-lg">Get in touch with PNW Rhinos to start a conversation about the team and the game.</p>
-        <a href={SITE.cta.href} class="btn btn-dark btn-lg mt-12">Contact the team</a>
+        <a href={withBase(SITE.cta.href)} class="btn btn-dark btn-lg mt-12">Contact the team</a>
       </div>
     </div>
   </section>

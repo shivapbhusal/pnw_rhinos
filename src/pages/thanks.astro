@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Icon from "../components/Icon.astro";
 import { SITE } from "../config";
+import { withBase } from "../lib/site-path";
 ---
 
 <BaseLayout title="Thank you" description="Thanks for getting in touch with PNW Rhinos." noindex>
@@ -14,7 +15,7 @@ import { SITE } from "../config";
       <p class="lead mt-6">Your message has been received. Thanks for getting in touch with {SITE.name}.</p>
     </div>
     <div class="mx-auto mt-12 flex max-w-2xl justify-center">
-      <a href="/" class="btn btn-primary btn-lg">Back to home</a>
+      <a href={withBase("/")} class="btn btn-primary btn-lg">Back to home</a>
     </div>
   </section>
 </BaseLayout>
