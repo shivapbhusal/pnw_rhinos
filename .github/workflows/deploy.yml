@@ -39,8 +39,11 @@ jobs:
       - name: Build for GitHub Pages
         run: npm run build
         env:
-          BASE_PATH: /pnw_rhinos
-          SITE_URL: https://shivapbhusal.github.io
+          BASE_PATH: /
+          SITE_URL: https://www.pnwrhinos.com
+
+      - name: Add custom domain
+        run: printf '%s\n' 'www.pnwrhinos.com' > dist/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
