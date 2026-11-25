@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import { SITE } from "../config";
+---
+
+<BaseLayout title="Thank you" description="Thanks for getting in touch with PNW Rhinos." noindex>
+  <section class="container-x py-20 sm:py-28">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="mx-auto grid size-20 place-items-center rounded-full bg-accent text-accent-text">
+        <Icon name="check" size={40} />
+      </span>
+      <h1 class="h-display mt-10"><span class="dim">Thanks for reaching</span> <span class="hl">out.</span></h1>
+      <p class="lead mt-6">Your message has been received. Thanks for getting in touch with {SITE.name}.</p>
+    </div>
+    <div class="mx-auto mt-12 flex max-w-2xl justify-center">
+      <a href="/" class="btn btn-primary btn-lg">Back to home</a>
+    </div>
+  </section>
+</BaseLayout>

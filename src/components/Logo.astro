@@ -1,0 +1,17 @@
+---
+/** The shared team logo and wordmark used in the desktop and mobile headers. */
+import { SITE } from "../config";
+
+interface Props {
+  class?: string;
+}
+const rest = SITE.name.replace(SITE.shortName, "").trim();
+---
+
+<span class:list={["logo inline-flex items-center gap-3", Astro.props.class]}>
+  <img src="/logo.jpg" alt="" aria-hidden="true" width="40" height="40" class="size-9 shrink-0 rounded-lg object-contain lg:size-10" />
+  <span class="flex flex-col leading-none">
+    <span class="text-[1.0625rem] font-semibold tracking-[0.16em] uppercase">{SITE.shortName}</span>
+    {rest && <span class="mt-1 text-[0.6875rem] tracking-[0.32em] text-muted uppercase">{rest}<span class="text-accent">.</span></span>}
+  </span>
+</span>

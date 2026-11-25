@@ -1,0 +1,99 @@
+---
+import { SITE } from "../../config";
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero-image" src="/og.jpg" alt="" aria-hidden="true" fetchpriority="high" />
+  <div class="hero-col">
+    <h1 id="hero-title" class="h-display hero-title">
+      <span class="h1-line tilt-in">PNW Rhinos</span>
+      <span class="h1-line wipe-in">Cricket club<span class="hl">.</span></span>
+    </h1>
+    <div class="hero-lead fade-in">
+      <p class="lead">{SITE.description}</p>
+      <div class="hero-actions">
+        <a href="/cricket/" class="btn btn-primary">Discover the club</a>
+        <a href="/contact/#enquiry" class="hero-contact">Get in touch <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    overflow: clip;
+    background: var(--c-bg);
+  }
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 43%;
+  }
+  .hero::after {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgb(4 3 25 / 0.88) 0%, rgb(4 3 25 / 0.72) 42%, rgb(4 3 25 / 0.18) 100%),
+      linear-gradient(0deg, rgb(4 3 25 / 0.82) 0%, transparent 58%);
+    content: "";
+  }
+  .hero-col {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    min-height: 100svh;
+    margin-inline: auto;
+    pointer-events: none;
+  }
+  .hero-col a {
+    pointer-events: auto;
+  }
+  .hero-title {
+    position: absolute;
+    top: 147px;
+    left: 0;
+    color: var(--c-white);
+  }
+  .h1-line {
+    display: block;
+    white-space: nowrap;
+  }
+  .h1-line + .h1-line {
+    margin-top: 0.07em;
+  }
+  .hero-lead {
+    position: absolute;
+    bottom: 56px;
+    left: 2.4vw;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .hero-contact {
+    color: var(--c-white);
+    font-weight: 700;
+  }
+  @media (min-width: 751px) {
+    .hero-col {
+      width: min(1200px, 100% - 64px);
+    }
+    .hero-title {
+      top: 172px;
+      left: -12px;
+    }
+    .hero-lead {
+      left: -12px;
+    }
+  }
+</style>

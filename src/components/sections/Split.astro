@@ -1,0 +1,68 @@
+<section class="club-story" aria-labelledby="club-story-title">
+  <div class="container-x story-grid">
+    <figure class="story-image">
+      <img src="/og.jpg" alt="Cricket players together as a team" loading="lazy" />
+    </figure>
+    <div class="story-copy">
+      <p class="eyebrow">A shared love of cricket</p>
+      <h2 id="club-story-title">Play hard. Back your team. Enjoy the game.</h2>
+      <p>
+        Cricket is built on skill and strategy, but it is the people beside you that make it memorable. PNW Rhinos celebrates the
+        energy, effort, and togetherness that make the game special.
+      </p>
+      <a href="/about/" class="btn btn-secondary story-link">More about the Rhinos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .club-story {
+    padding-block: 72px;
+  }
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+  }
+  .story-image {
+    overflow: clip;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-media);
+    background: var(--c-surface);
+  }
+  .story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .story-copy h2 {
+    margin-top: 16px;
+    font-size: min(8vw, 56px);
+    line-height: 1.12;
+  }
+  .story-copy > p:not(.eyebrow) {
+    margin-top: 20px;
+    color: var(--c-muted);
+    font-size: 18px;
+  }
+  .story-link {
+    margin-top: 28px;
+  }
+  @media (min-width: 900px) {
+    .club-story {
+      padding-block: 120px;
+    }
+    .story-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 72px;
+    }
+  }
+</style>

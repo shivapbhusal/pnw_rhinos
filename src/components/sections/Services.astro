@@ -1,0 +1,95 @@
+---
+import FillLines from "../FillLines.astro";
+
+const pillars = [
+  {
+    number: "01",
+    title: "Love of the game",
+    text: "Cricket rewards patience, focus, and the courage to play the next ball well.",
+  },
+  {
+    number: "02",
+    title: "Team before self",
+    text: "Every role matters. We value the effort each player brings to the side.",
+  },
+  {
+    number: "03",
+    title: "Respect all around",
+    text: "The spirit of cricket means showing respect to teammates, opponents, and supporters.",
+  },
+];
+---
+
+<section class="club-pillars" aria-labelledby="club-pillars-title">
+  <div class="container-x">
+    <p class="eyebrow">What matters to us</p>
+    <FillLines as="h2" id="club-pillars-title" class="h-section pillars-title" lines={["The spirit of *cricket*"]} />
+    <p class="lead pillars-lead">A team is built through the way it plays, works together, and treats everyone around the game.</p>
+    <ul class="pillars-grid">
+      {pillars.map((pillar) => (
+        <li class="pillar-card">
+          <span class="pillar-number">{pillar.number}</span>
+          <h3>{pillar.title}</h3>
+          <p>{pillar.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .club-pillars {
+    padding-block: 72px;
+    background: var(--c-surface);
+  }
+  .eyebrow {
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .pillars-lead {
+    max-width: 640px;
+    margin-top: 20px;
+    color: var(--c-muted);
+  }
+  .pillars-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 42px;
+  }
+  .pillar-card {
+    min-height: 220px;
+    padding: 28px;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-media);
+    background: var(--c-bg);
+  }
+  .pillar-number {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .pillar-card h3 {
+    margin-top: 28px;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .pillar-card p {
+    margin-top: 12px;
+    color: var(--c-muted);
+  }
+  @media (min-width: 751px) {
+    .club-pillars {
+      padding-block: 110px;
+    }
+    .pillars-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 56px;
+    }
+  }
+</style>

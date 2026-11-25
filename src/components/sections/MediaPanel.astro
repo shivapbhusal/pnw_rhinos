@@ -1,0 +1,62 @@
+<section class="media-section" aria-labelledby="media-title">
+  <div class="container-x media-panel">
+    <span class="media-mark" aria-hidden="true">PNW</span>
+    <div class="media-copy">
+      <p class="eyebrow">The game brings us together</p>
+      <h2 id="media-title">Every ball is a new chance to play for the team<span class="hl">.</span></h2>
+    </div>
+  </div>
+</section>
+
+<style>
+  .media-section {
+    padding-block: 48px;
+  }
+  .media-panel {
+    position: relative;
+    display: flex;
+    min-height: 430px;
+    align-items: flex-end;
+    overflow: clip;
+    padding: 32px;
+    border-radius: var(--radius-media);
+    background:
+      radial-gradient(ellipse at 82% 18%, rgb(244 185 66 / 0.3), transparent 34%),
+      linear-gradient(135deg, #10243c, #08091a 68%);
+  }
+  .media-mark {
+    position: absolute;
+    top: -0.5em;
+    right: -0.08em;
+    color: rgb(255 255 255 / 0.06);
+    font-size: clamp(180px, 35vw, 520px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.1em;
+  }
+  .media-copy {
+    position: relative;
+    max-width: 760px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .media-copy h2 {
+    margin-top: 16px;
+    font-size: min(9vw, 64px);
+    line-height: 1.08;
+  }
+  @media (min-width: 751px) {
+    .media-section {
+      padding-block: 80px;
+    }
+    .media-panel {
+      min-height: 560px;
+      padding: 64px;
+    }
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import FillLines from "../FillLines.astro";
+import CricketDetails from "../CricketDetails.astro";
+---
+
+<section class="statement" aria-labelledby="statement-title">
+  <div class="container-x statement-col">
+    <div class="statement-copy">
+      <p class="eyebrow">One game. One community.</p>
+      <FillLines as="h2" id="statement-title" class="h-statement statement-text" lines={["Cricket brings us", "together across the", "*Pacific Northwest*."]} />
+      <p class="t-big statement-para">
+        PNW Rhinos is a cricket team for people who share a love of the game, value teamwork, and want to be part of a welcoming
+        cricket community.
+      </p>
+    </div>
+    <CricketDetails class="statement-cricket" />
+  </div>
+</section>
+
+<style>
+  .statement {
+    position: relative;
+    z-index: 1;
+    padding-block: 72px;
+    background: var(--c-bg);
+  }
+  .statement-col {
+    display: grid;
+    gap: 42px;
+  }
+  .eyebrow {
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .statement-para {
+    max-width: 620px;
+    margin-top: 24px;
+    line-height: 1.4;
+  }
+  @media (min-width: 1001px) {
+    .statement {
+      padding-block: 120px;
+    }
+    .statement-col {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+      align-items: center;
+      gap: 72px;
+    }
+  }
+</style>

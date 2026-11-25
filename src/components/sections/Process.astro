@@ -1,0 +1,78 @@
+<section class="game-values" aria-labelledby="game-values-title">
+  <div class="container-x values-layout">
+    <div>
+      <p class="eyebrow">On and off the field</p>
+      <h2 id="game-values-title">A good team makes room for everyone.</h2>
+      <p class="values-intro">
+        Whether you play, follow, or simply love cricket, there is always something to appreciate in the game and its community.
+      </p>
+    </div>
+    <ul class="values-list">
+      <li><span>01</span><strong>Teamwork</strong><p>Trust the people beside you and celebrate the effort they bring.</p></li>
+      <li><span>02</span><strong>Sportsmanship</strong><p>Compete with pride and respect everyone who shares the field.</p></li>
+      <li><span>03</span><strong>Community</strong><p>Keep cricket welcoming, connected, and part of the Pacific Northwest.</p></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .game-values {
+    padding-block: 72px;
+    background: var(--c-surface);
+  }
+  .values-layout {
+    display: grid;
+    gap: 42px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .values-layout h2 {
+    max-width: 520px;
+    margin-top: 16px;
+    font-size: min(8vw, 56px);
+    line-height: 1.1;
+  }
+  .values-intro {
+    max-width: 480px;
+    margin-top: 20px;
+    color: var(--c-muted);
+    font-size: 18px;
+  }
+  .values-list {
+    display: grid;
+    gap: 12px;
+  }
+  .values-list li {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 8px 14px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--c-line);
+  }
+  .values-list li > span {
+    grid-row: span 2;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .values-list strong {
+    font-size: 20px;
+  }
+  .values-list p {
+    color: var(--c-muted);
+  }
+  @media (min-width: 900px) {
+    .game-values {
+      padding-block: 110px;
+    }
+    .values-layout {
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: start;
+    }
+  }
+</style>
