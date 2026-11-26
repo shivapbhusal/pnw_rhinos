@@ -3,7 +3,7 @@ export const members = [
     name: "Sudeep Aryal",
     role: "All-rounder",
     profile: "A versatile PNW Rhinos team member contributing across batting, bowling, and fielding.",
-    photo: "",
+    photo: "/members/sudeep.jpg",
   },
   {
     name: "Member 2",
