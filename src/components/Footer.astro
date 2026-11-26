@@ -1,6 +1,7 @@
 ---
 /** 13. Footer over an animated 3D field of dots (canvas, src/scripts/scenes.ts). */
 import { SITE } from "../config";
+import Icon from "./Icon.astro";
 
 const year = new Date().getFullYear();
 ---
@@ -37,7 +38,10 @@ const year = new Date().getFullYear();
       <ul class="f-social">
         {SITE.social.map((s) => (
           <li>
-            <a href={s.href} class="f-small" rel="noopener" target="_blank">{s.label}</a>
+            <a href={s.href} class="f-small" rel="noopener" target="_blank">
+              <Icon name={s.icon} size={20} />
+              <span>{s.label}</span>
+            </a>
           </li>
         ))}
       </ul>
@@ -122,6 +126,9 @@ const year = new Date().getFullYear();
     color: var(--c-ink);
   }
   .f-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 14px;
     color: var(--c-muted);
   }

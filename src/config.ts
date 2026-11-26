@@ -8,7 +8,10 @@ export const SITE = {
   lang: "en",
   locale: "en_US",
   areaServed: "Pacific Northwest",
-  social: [] as { label: string; href: string }[],
+  social: [
+    { label: "YouTube", href: "http://www.youtube.com/@EverestWarriors", icon: "youtube" },
+    { label: "Facebook", href: "https://www.facebook.com/p/Everest-Warriors-61557209922474/", icon: "facebook" },
+  ],
   theme: { accent: "#2563eb", accentText: "#ffffff" },
   formgong: {
     accessKey: "fk_your_access_key",
