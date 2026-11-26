@@ -3,38 +3,62 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { SITE } from "../config";
-
-const members = [
-  { title: "Players", text: "The people who bring skill, effort, and teamwork to the game." },
-  { title: "Supporters", text: "The friends and fans who share the excitement of cricket." },
-  { title: "Community", text: "Everyone connected by a love of cricket in the Pacific Northwest." },
-];
+import { about } from "../data/about";
+import { history } from "../data/history";
+import { members, memberSection } from "../data/members";
 ---
 
 <BaseLayout title="About" description={`${SITE.name} is a cricket team in the Pacific Northwest, connected by teamwork, respect, and a shared love of the game.`}>
   <PageHeader
-    title="A team shaped by *cricket*"
-    lead={`${SITE.name} brings the game and its community together across the Pacific Northwest.`}
+    title={about.title}
+    lead={about.lead.replaceAll("PNW Rhinos", SITE.name)}
   />
 
   <section id="history" class="section scroll-mt-28" aria-labelledby="history-title">
     <div class="container-x">
       <SectionHeading
         id="history-title"
-        title="A story still *growing*"
-        lead={`${SITE.name} is rooted in a shared love of cricket and community across the ${SITE.areaServed}. The club's story is built through the people who come together around the game.`}
+        title={history.title}
+        lead={history.lead.replaceAll("PNW Rhinos", SITE.name).replaceAll("Pacific Northwest", SITE.areaServed)}
       />
     </div>
   </section>
 
   <section id="members" class="section pt-0 scroll-mt-28" aria-labelledby="members-title">
     <div class="container-x">
-      <SectionHeading id="members-title" title="The people behind the *team*" lead="A cricket club is more than the players on the field. It's a community that shares the game." />
+      <SectionHeading id="members-title" title={memberSection.title} lead={memberSection.lead} />
       <ul class="stagger mt-14 grid gap-6 md:grid-cols-3">
         {members.map((value, i) => (
           <li class="card p-7" style={`--i:${i}`}>
-            <h3 class="text-xl">{value.title}</h3>
-            <p class="mt-3 text-muted">{value.text}</p>
+            {value.photo ? (
+              <img
+                src={value.photo}
+                alt={`${value.name}, ${value.role}`}
+                class="mb-6 aspect-[4/5] w-full rounded-xl object-cover"
+                
+              />
+            ) : (
+              <div class="mb-6 flex aspect-[4/5] items-center justify-center rounded-xl border border-line bg-surface text-muted" aria-label={`No photo available for ${value.name}`}>
+                <span>Photo</span>
+              </div>
+            )}
+
+            
+
+            <dl class="space-y-5">
+              <div>
+                <dt class="text-sm font-bold uppercase tracking-wider text-accent">Name</dt>
+                <dd class="mt-1 text-xl">{value.name}</dd>
+              </div>
+              <div>
+                <dt class="text-sm font-bold uppercase tracking-wider text-accent">Role</dt>
+                <dd class="mt-1">{value.role}</dd>
+              </div>
+              <div>
+                <dt class="text-sm font-bold uppercase tracking-wider text-accent">Profile</dt>
+                <dd class="mt-1 text-muted">{value.profile}</dd>
+              </div>
+            </dl>
           </li>
         ))}
       </ul>
